@@ -18,12 +18,14 @@ From: ubuntu:focal
     libboost-python-dev \
     libboost-program-options-dev \
     g++-multilib \
+    python2.7 \
+	python-dev \
     g++ \
     git
 
     rm -rf /var/lib/apt/lists/*
 
-    git clone -b bfws-cost https://github.com/nirlipo/BFWS-public.git /planner/BFWS
+    git clone -b bfws-cost https://github.com/hstairs/BFWS-public.git /planner/BFWS
     git clone https://github.com/LAPKT-dev/LAPKT-public.git /planner/LAPKT-public
 
     
@@ -83,8 +85,8 @@ From: ubuntu:focal
 
 
     ## Call your planner using FD-parser.
-    #/planner/BFWS/fd-version/bfws_anytime_fd_singularity.py $DOMAINFILE $PROBLEMFILE $PLANFILE
-    $PLANNER $DOMAINFILE $PROBLEMFILE $PLANFILE
+    /planner/BFWS/fd-version/bfws_cost.py $DOMAINFILE $PROBLEMFILE $PLANFILE
+    #$PLANNER $DOMAINFILE $PROBLEMFILE $PLANFILE
 
 ## Update the following fields with meta data about your submission.
 ## Please use the same field names and use only one line for each value.
