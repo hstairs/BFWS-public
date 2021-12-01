@@ -23,9 +23,10 @@ From: ubuntu:focal
 
     rm -rf /var/lib/apt/lists/*
 
-    git clone https://github.com/nirlipo/BFWS-public.git /planner/BFWS
+    git clone -b bfws-cost https://github.com/nirlipo/BFWS-public.git /planner/BFWS
     git clone https://github.com/LAPKT-dev/LAPKT-public.git /planner/LAPKT-public
 
+    
     ## Set up environment variables
     ##
     ## Uncomment if you want to get latest LAPKT version
